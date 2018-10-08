@@ -1,0 +1,28 @@
+<html>
+    <head><link rel=stylesheet type=text/css href={{ url_for('static', filename='editdeletetemp4.css')}}>
+    </head>
+    <body>
+        <div>
+        <h1>New Menu Item</h1>
+        <form action="{{url_for('newMenuItem', restaurant_id=restaurant_id)}}" method = 'post'>
+            <p>Name: </p>
+            <input type='text', size=30, name='name'>
+            <p>Price: </p>
+            <input type='text', size=30, name='price'>
+            <p>Description: </p>
+            <input type='text', size=30, name='description'>
+            <p>Course:</p>
+            <input type='radio', id='Appetizer', name='course', value = 'Appetizer',checked>
+            <label for='appetizer'>Appetizer</label></br>
+            <input type='radio', id='Entree', name='course', value='Entree'>
+            <label for='entree'>Entree</label></br>
+            <input type='radio', id='Dessert', name='course', value='Dessert'>
+            <label for='dessert'>Dessert</label></br>
+            <input type='radio', id='Beverage', name='course', value='Beverage'>
+            <label for='beverage'>Beverage</label></br>
+            <input type='submit', value='Create'>
+        </form>
+        <a href="{{url_for('showMenu', restaurant_id=restaurant_id)}}">Cancel</a>
+    </div>
+    </body>
+</html>

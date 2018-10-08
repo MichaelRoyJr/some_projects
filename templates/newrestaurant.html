@@ -1,0 +1,16 @@
+<html>
+    <head><link rel=stylesheet type=text/css href={{ url_for('static', filename='editdeletetemp3.css')}}></head>
+<body>
+<div>
+<h1>Create a New Restaurant</h1></br>
+
+<form action ="{{url_for('newRestaurant', restaurant_id=restaurant_id)}}" method = 'post'>
+    <input type='text', size=30, name = 'name', placeholder='New Restaurant'>
+    <input type='submit', value="Create">
+</form></br>
+
+<a href="{{url_for('showRestaurant')}}">Cancel</a>
+</div>
+
+</body>
+</html>

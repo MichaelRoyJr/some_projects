@@ -1,5 +1,5 @@
 /** This counts the number of inversions (numbers out of order) in a large array using a version of a merge-sort algorithm.
-    Each 
+    As the sorted arrays are merged after all recursions are done each item skipped in 'left-hand' array is an inverion.
 **/
 
 #include "stdafx.h"
@@ -62,7 +62,7 @@ vector<int> MergeSort(vector<int>&inputArray, long long &inversions) {
 
 int main() {
 
-	ifstream fin("C://Users/micha/Documents/Algorithms/IntegerArray.txt");
+	ifstream fin("IntegerArray.txt");
 	int arraySize = 100000;
 	long long inversions = 0;
 	vector<int> sourceArray(arraySize);

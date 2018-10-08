@@ -1,0 +1,3 @@
+Originally developed using Flask on a Vagrant VM.  
+finalproject.py is the main file.
+Opens using localhost:5000/

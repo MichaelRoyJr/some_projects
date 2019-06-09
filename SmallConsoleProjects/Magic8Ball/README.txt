@@ -1,5 +1,5 @@
 Description
-	This program is a console based simulation of a Magic 8 Ball toy.  If not 	known, the user "asks" the Magic 8 Ball a question and at random gets 1	of 	20 different responses.  
+	This program is a console based simulation of a Magic 8 Ball toy.  If not known, the user "asks" the Magic 8 Ball a question and 	 at random gets 1 of 20 different responses.  
 
 Highlights
 	-String array 'responses' holds potential responses.
@@ -9,4 +9,5 @@ Highlights
 	-response uses random number to index response array
 	
 To Run
-	Magic8Ball.java can run in any java environment.  Dowmload Magic8Ball.java  	to your machine, compile and run in your preferred java environment. 
+	Magic8Ball.java can run in any java environment.  Dowmload Magic8Ball.java to your machine, compile and run in your preferred
+	java environment. 

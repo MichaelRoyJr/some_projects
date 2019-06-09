@@ -1,3 +1,35 @@
-Originally developed using Flask on a Vagrant VM.  
-finalproject.py is the main file.
+Note:  Still under Construction
+
+
+Description
+  This project is a fully navigable, editable web-based restaurant menu application.  The main page is a list of restaurants, each of which 
+  links to the menu containing items, listed by course, prices, and a brief description, as well as links to edit all of these.  JSON 
+  endpoints are included as well for lists of restaurants, menus of restaurants, and items on a menu.
+  
+  The majority is writtten in Python, using the Flask framework, but also includes HTML and CSS files for page rendering.  Sqlalchemy is 
+  the database.
+  
+  This project began during Udacity's Full Stack Foundations online course. Some code is boilerplate, but most functionality developed
+  myself.  When added, the database population file was provided in course materials. This file not necessary to run the project, but
+  provides a starting menu for editing.
+
+Contents
+  finalproject.py 
+    Contains functions to display each page, as well as functions to update the database, and create JSON endpoints.
+  database_setup.py 
+    Creates a sqlalchemy database file(restaurant.db) containing all the necessary fields for this project over two classes of entry,
+    Restaurant and MenuItem.  Also contains serialize functions for each, used in construction of JSON endpoints.
+  restaurantmenu.db
+    File contains the restaurant database created and updated on my machine during development and testing, as of approximately
+    10-8-18, i.e. the original posting date. Not necessary to run the project remotely, as file will be created by database_setup.py,
+    but a usable database for finalproject.py, if running setup not feasible.
+  lots_of_menus.py
+    Script to populate the database with a prearranged list of reataurants, menus, and items.  Not my original work.
+    Still to be added.
+  static
+    Folder containing style sheets for pages.  Also contains files used on pages, right now only forkandknife.jpg, used as background.
+  templates
+    Folder containing all HTML files necessary to display each type of page.
+
+
 Opens using localhost:5000/

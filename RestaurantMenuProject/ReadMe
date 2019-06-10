@@ -30,6 +30,22 @@ Contents
     Folder containing style sheets for pages.  Also contains files used on pages, right now only forkandknife.jpg, used as background.
   templates
     Folder containing all HTML files necessary to display each type of page.
-
+    
+How to run
+  All testing performed on a Vagrant VM.  Other ways to run this file will work as well, but are not discussed in this ReadMe. After
+  downloading files to your machine, install any necessary dependencies into VM, if not already installed. The most likely libraries to
+  need are flask(including Flask, render_template, url_for, flash, redirect, request, and jsonify), and sqlalchemy(likely to need
+  sessionmaker and create_engine).  Make sure folders 'templates' and 'static' are installed into same directory as three python files,
+  finalproject.py, database_setup.py, and lotsofmenus.py.  If not already, install Vagrant and VM VirtualBox.
+  
+ Open VM environment and navigate to directory files are contained in.  First, run database_setup.py.  This will initialize SQLAlchemy
+ database 'restaurant.db'.  Next, run lotsofmenus.py.  This will populate the database with entries.  This step is not strictly
+ necessary, but will give the user a list of restaurants and menus to begin exploring.  This has also been done by me, and results are
+ reflected in my version of restaurantmenu.db.
+ 
+ Next, run finalproject.py.  Once running, open web browser, I used Chrome, but all should work.  Use URL localhost:5000/ to view page.
+ From main page, user can navigate using links to find menu/item desired to edit or delete, as well as add new entries.  To exit, ctrl+c.
+ 
+  
 
 Opens using localhost:5000/

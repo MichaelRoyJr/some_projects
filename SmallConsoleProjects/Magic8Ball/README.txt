@@ -1,5 +1,6 @@
 Description
-	This program is a console based simulation of a Magic 8 Ball toy.  If not known, the user "asks" the Magic 8 Ball a question and	at random gets 1 of 20 different responses.  
+	This program is a console based simulation of a Magic 8 Ball toy.  If not known, the user "asks" the Magic 8 Ball a question and
+	at random gets 1 of 20 different responses.  
 
 Highlights
 	-String array 'responses' holds potential responses.

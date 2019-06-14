@@ -1,6 +1,3 @@
-Note:  Still under Construction
-
-
 Description
   This project is a fully navigable, editable web-based restaurant menu application.  The main page is a list of restaurants, each of which 
   links to the menu containing items, listed by course, prices, and a brief description, as well as links to edit all of these.  JSON 

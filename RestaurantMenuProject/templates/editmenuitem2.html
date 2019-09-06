@@ -3,7 +3,7 @@
             <link rel=stylesheet type=text/css href={{ url_for('static', filename='editdeletetemp4.css')}}>
     </head>
     <body>
-        <div>
+        <div class=eddel>
         <h1>Edit {{item.name}}</h1>
         <form action="{{url_for('editMenuItem', restaurant_id=restaurant_id, menu_id=item.id)}}", method = 'post'>
                 <p>Name: </p>

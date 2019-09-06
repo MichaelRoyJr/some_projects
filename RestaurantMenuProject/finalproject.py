@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for, flash, redirect, request, jso
 app = Flask(__name__)
 
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker 
+from sqlalchemy.orm import sessionmaker
 from database_setup import Restaurant, Base, MenuItem
 
 engine = create_engine('sqlite:///restaurantmenu.db')
@@ -62,7 +62,22 @@ def showMenu(restaurant_id):
     items = session.query(MenuItem).filter_by(restaurant_id=restaurant.id)
     if items ==[{}]:
         flash('You have no menu items')
-    return render_template('restaurantmenu.html', restaurant=restaurant, items=items)
+    apps = []
+    entrees = []
+    desserts = []
+    bevs =[]
+    for i in items:
+        if i.course == 'Appetizer':
+            apps.append(i)
+        if i.course == 'Entree':
+            entrees.append(i)
+        if i.course == 'Dessert':
+            desserts.append(i)
+        if i.course == 'Beverage':
+            bevs.append(i)
+    print("apps =" , apps)
+    print("entrees =", entrees)
+    return render_template('restaurantmenu.html', restaurant=restaurant, apps=apps, entrees=entrees, desserts=desserts, bevs=bevs)
 
 @app.route('/restaurants/<int:restaurant_id>/menu/new/', methods=['GET', 'POST'])
 def newMenuItem(restaurant_id):
@@ -75,7 +90,7 @@ def newMenuItem(restaurant_id):
         return redirect(url_for('showMenu', restaurant_id=restaurant.id))
     else:
         return render_template('newmenuitem2.html', restaurant_id=restaurant.id)
-    
+
 @app.route('/restaurants/<int:restaurant_id>/menu/<int:menu_id>/edit/', methods=['GET', 'POST'])
 def editMenuItem(restaurant_id, menu_id):
     updateItem = session.query(MenuItem).filter_by(id=menu_id).one()
